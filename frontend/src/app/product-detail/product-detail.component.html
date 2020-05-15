@@ -1,0 +1,31 @@
+<div class="backdrop">
+    <!-- <div class="container text-center">
+        <h1>{{ product.title }}</h1>
+        <img src="mpoa" alt="product image">
+        <hr>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }}</p>
+        
+    </div> -->
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ product.title }}</h5>
+                <button type="button" class="close" (click)="onCloseButton()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>{{ product.description }}</p>
+                <br>
+                <p>$ {{ product.price }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" (click)="onAddToCart(product)">Add to cart</button>
+                <button type="button" class="btn btn-secondary" (click)="onCloseButton()">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>

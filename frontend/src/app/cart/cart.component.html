@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let item of cartItems">
+            <div>
+                <div>
+                    <span>{{ item.product.title }} - {{ item.quantity }}</span>
+                </div>
+                <div>
+                    <span>Subtotal: $ {{ item.quantity * item.product.price }}</span>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-danger" (click)="onClickRemove(item.product._id)">Remove</button>
+            </div>
+        </li>
+    </ul>
+    <hr>
+    <div class="text-center" *ngIf="cartItems.length > 0;else cartEmpty">
+        <h3>Total: $ {{ totalPrice }}</h3>
+        <button class="btn btn-dark">Order now!</button>
+    </div>
+    <ng-template #cartEmpty>
+        <div class="text-center">
+            <h3>Your cart is empty!</h3>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,17 @@
+<app-product-detail [product]='product' *ngIf="openModal" (onClose)="handleModal()"></app-product-detail>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+    <div class="card-body text-center">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">$ {{ product.price }}</p>
+        <div *ngIf="!adminMode">
+            <button class="btn btn-dark" style="margin: .25rem;" routerLink='' (click)='onAddToCart(product)'>Add to cart</button>
+            <button class="btn btn-light" style="margin: .25rem;" (click)='onClickDetails()'>Details</button>
+        </div>
+        <div *ngIf="adminMode">
+            <button class="btn btn-dark" style="margin: .25rem;" (click)='onEdit(product)'>Edit</button>
+            <button class="btn btn-light" style="margin: .25rem;" (click)='onDelete(product)'>Delete</button>
+        </div>
+    </div>
+</div>
