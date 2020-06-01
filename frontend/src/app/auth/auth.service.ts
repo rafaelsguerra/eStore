@@ -12,7 +12,7 @@ export class AuthService {
     // todo
   }
 
-  signup() {
+  signup(name: string, email: string, password: string) {
     // todo
   }
 
