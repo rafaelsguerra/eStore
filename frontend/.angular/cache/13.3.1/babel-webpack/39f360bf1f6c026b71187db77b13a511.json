@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class User {\n  // public cart: {\n  //     items: {\n  //         product: Product,\n  //         quantity: number\n  //     }[]\n  // }\n  constructor(name, email, password, cart) {\n    this.name = name;\n    this.email = email;\n    this.password = password;\n    this.cart = cart;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
